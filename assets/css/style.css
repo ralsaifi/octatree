@@ -88,10 +88,10 @@ a { text-decoration: none; }
     margin-top: 0;
     background: #333;
     border-radius: 6px 0 6px 6px;
-    padding: 8px 12px;
+    padding: 8px;
 }
 
-.mobile.navigation li a {
+.mobile.navigation li:not(:last-of-type) a { 
     border-bottom: 1px solid;
 }
 
@@ -102,7 +102,7 @@ a { text-decoration: none; }
     font-weight: bold;
 }
 
-.mobile.navigation a.contact { margin-top: 24px;}
+.mobile.navigation a.contact { border-radius: 0 0 4px 4px;}
 
 .menu-toggle:hover, .menu-toggle:active {
     background-color: #333;
