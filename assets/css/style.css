@@ -27,11 +27,17 @@ a { text-decoration: none; }
     display: inline-block;
     padding: 16px 24px;
     color: #333;
+    cursor: pointer;
 }
 
-.primary-button { background-color: #eee; }
+.primary.button {
+    color: #fff;
+    background-color: #f57c00;
+}
 
-.secondary-link { color: #f57c00; }
+.secondary.button { background-color: #eee; }
+
+.primary.link { color: #f57c00; }
 
 .wrapper {
     margin: 0 auto;
@@ -56,23 +62,62 @@ a { text-decoration: none; }
 
 .title a { color: #000; }
 
-.navigation { list-style: none; }
-
-.navigation li { display: inline-block; }
-
-.main-navbar .navigation li { margin-right: 16px; }
-
-.main-navbar .navigation a { font-weight: bold;}
-
-.main-navbar .navigation a { color: #666; }
-
-.main-navbar .contact .button {
+.main-navbar .button {
     color: #fff;
     background-color: #f57c00;
     padding: 10px 14px;
 }
 
-.main-header { padding: 126px 0; }
+.navigation { list-style: none; }
+
+.desktop.navigation li { display: inline-block; }
+
+.desktop.navigation li { margin-right: 16px; }
+
+.desktop.navigation a { font-weight: bold;}
+
+.desktop.navigation a { color: #666; }
+
+.navigation-container { position: relative; }
+
+.mobile.navigation {
+    display: none;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    margin-top: 0;
+    background: #333;
+    border-radius: 6px 0 6px 6px;
+    padding: 8px 12px;
+}
+
+.mobile.navigation li a {
+    border-bottom: 1px solid;
+}
+
+.mobile.navigation a {
+    display: block; 
+    color: #fff; 
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.mobile.navigation a.contact { margin-top: 24px;}
+
+.menu-toggle:hover, .menu-toggle:active {
+    background-color: #333;
+    border-radius: 20px 20px 0 0;
+}
+
+.menu-toggle:hover + .navigation.mobile, 
+.menu-toggle:active + .navigation.mobile, 
+.navigation.mobile:active {
+    display: block;
+}
+
+.main-header { padding: 126px 18px; }
+
+.main-header .actions > a { margin-right: 12px;}
 
 .main-header h2 { margin: 20px 0; }
 
@@ -82,5 +127,5 @@ a { text-decoration: none; }
 @media (max-width: 768px) {
     .desktop { display: none; }
     .mobile { display: block; }
-    .main-header { padding: 90px 18px; }
+    .main-header { padding: 80px 18px; }
 }
