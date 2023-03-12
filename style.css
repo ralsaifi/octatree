@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Quicksand', Arial, sans-serif;
+    margin: 0;
+}
+
+/* Utility classes ********************************************/
+
+a { text-decoration: none; }
+
+.text-bold { font-weight: bold;}
+
+.rounded { border-radius: 999px; }
+
+.flex { display: flex; }
+
+.items-center { align-items: center; }
+
+.flex-right { margin-left: auto; }
+
+.text-2xl { font-size: 2.8em; }
+
+.icon { font-size: 1.4em;}
+
+.button {
+    display: inline-block;
+    padding: 16px 24px;
+    color: #333;
+}
+
+.primary-button { background-color: #eee; }
+
+.secondary-link { color: #f57c00; }
+
+.wrapper {
+    margin: 0 auto;
+    width: 999px;
+    max-width: 100%;
+}
+
+/* Component style *******************************/
+
+.main-navbar,
+.main-header,
+.main-content, 
+.main-footer {
+    padding: 0 18px;
+}
+
+.main-navbar { padding: 20px 18px;}
+
+.identity { color: #000; }
+
+.logo { width: 86px; margin: 0 -10px; }
+
+.title a { color: #000; }
+
+.navigation { list-style: none; }
+
+.navigation li { display: inline-block; }
+
+.main-navbar .navigation li { margin-right: 16px; }
+
+.main-navbar .navigation a { font-weight: bold;}
+
+.main-navbar .navigation a { color: #666; }
+
+.main-navbar .contact .button {
+    color: #fff;
+    background-color: #f57c00;
+    padding: 10px 14px;
+}
+
+.main-header { padding: 126px 0; }
+
+.main-header h2 { margin: 20px 0; }
+
+/* Responsive style *******************************/
+.mobile { display: none; }
+
+@media (max-width: 768px) {
+    .desktop { display: none; }
+    .mobile { display: block; }
+    .main-header { padding: 90px 18px; }
+}
